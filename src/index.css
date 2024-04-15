@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    /* transform: scale(2);
+    z-index: 5;
+    position: relative;
+    transform-origin: left top;
+    transition: transform 1s ease; */
+    border: solid 2px rgb(46, 46, 46);
+}
+
+.inactive {
+    /* transform: scale(1);
+    transform-origin: left top;
+    transition: transform 1s ease; */
+    border: none;
+}
