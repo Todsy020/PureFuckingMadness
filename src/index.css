@@ -17,3 +17,12 @@
     transition: transform 1s ease; */
     border: none;
 }
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Generic-G50-CC-Typic-DEMO.otf);
+  }
+
+  body {
+    font-family: myFirstFont;
+  }

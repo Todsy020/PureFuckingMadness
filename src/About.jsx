@@ -5,7 +5,7 @@ export const About = () => {
     return (
         <div>
             <Navbar/>
-            <div className="flex justify-center items-center mt-32 font-bold mobile:flex-col-reverse mobile:mt-20">
+            <div className="flex justify-center items-center mt-32 mobile:flex-col-reverse mobile:mt-20">
             <div className="flex flex-col justify-center items-center text-sm w-5/12 mobile:w-screen">
             <span className="text-white text-4xl mb-10 text-center mobile:mb-6 mobile:mt-9">MAX &quot;M666X&quot; PEREIRA</span>
             <p className="text-white w-3/4 text-center">
