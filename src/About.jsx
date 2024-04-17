@@ -1,9 +1,13 @@
-
+import { motion } from "framer-motion"
 import {Navbar} from "./Navbar"
 
 export const About = () => {
     return (
-        <div>
+        <motion.div className="overflow-hidden"
+        initial={{ x: -300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 300, opacity: 0 }}
+      transition={{duration: 1.2, ease: [0.22, 1, 0.36, 1]}}>
             <Navbar/>
             <div className="flex justify-center items-center mt-32 mobile:flex-col-reverse mobile:mt-20">
             <div className="flex flex-col justify-center items-center text-sm w-5/12 mobile:w-screen">
@@ -20,6 +24,6 @@ export const About = () => {
         </div>  
         <img className="w-1/4 mr-40 mobile:w-64 mobile:mr-0" src="/M666X-Portrait.png" alt="" />
         </div>
-        </div>
+        </motion.div>
     )
 }

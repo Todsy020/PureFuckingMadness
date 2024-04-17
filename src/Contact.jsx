@@ -3,7 +3,11 @@ import { motion } from "framer-motion"
 
 export const Contact = () => {
     return (
-    <div className="">
+    <motion.div className="overflow-hidden"
+    initial={{ x: -300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 300, opacity: 0 }}
+      transition={{duration: 1.2, ease: [0.22, 1, 0.36, 1]}}>
     <Navbar/>
     <div className="flex justify-center items-center gap-80 mt-44 overflow-hidden mobile:gap-14 mobile:mt-12 mobile:h-screen">
         <img className="w-56 absolute top-[80px] left-[390px] mobile:w-36 mobile:top-[290px] mobile:left-[45px]" src="/instagram-bubble.png" alt="" />
@@ -26,6 +30,6 @@ export const Contact = () => {
         <img src="/email-angel.png" alt="" /></motion.a>
         
     </div>
-    </div>
+    </motion.div>
     )
 }
