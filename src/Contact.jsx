@@ -21,7 +21,7 @@ export const Contact = () => {
         <img className="" src="/instagram-angel.png " alt="" /></motion.a>
         <img className="w-64 absolute top-[100px] right-[450px] mobile:w-32 mobile:top-[315px] mobile:left-[190px] mobile:hidden" src="/email-bubble.png" alt="" />
         <p className="text-white absolute top-[120px] right-[480px] mobile:top-[330px] mobile:left-[190px]">PLACESVIDE@GMAIL.COM</p>
-    <motion.a className="w-1/4 mobile:w-1/2" href=""
+    <motion.a className="w-1/4 mobile:w-1/2" href="mailto:PLACESVIDE@GMAIL.COM"
     animate={{ rotate: [0, -4, 4, -4, 0],
         scale:[1.02,1,1.02, 1, 1.02]
      }}

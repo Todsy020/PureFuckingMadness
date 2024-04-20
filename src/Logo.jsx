@@ -29,11 +29,11 @@ export const Logo = () => {
     setImageSrcX(`/logo/x-${randomNumber4}.png`);
   }
 
-  setInterval(changeImageSrcM, 1500)
-  setInterval(changeImageSrc61, 1500)
-  setInterval(changeImageSrc62, 1500)
-  setInterval(changeImageSrc63, 1500)
-  setInterval(changeImageSrcX, 1500)
+  // setInterval(changeImageSrcM, 1500)
+  // setInterval(changeImageSrc61, 1500)
+  // setInterval(changeImageSrc62, 1500)
+  // setInterval(changeImageSrc63, 1500)
+  // setInterval(changeImageSrcX, 1500)
 
     return (
        <div className="flex justify-center items-center h-screen w-full">

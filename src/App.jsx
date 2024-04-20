@@ -6,10 +6,9 @@ import { motion } from "framer-motion"
 
 export const App = () => {
   return (
-    <motion.div className="overflow-hidden"
+    <motion.div className=""
     initial={{ y: 300, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -300, opacity: 0 }}
       transition={{duration: 1.2, ease: [0.22, 1, 0.36, 1]}}
       >
       <Logo/>

@@ -1,41 +1,29 @@
 import PropTypes from 'prop-types';
-import * as React from "react";
 import { motion } from "framer-motion"
+import { ArtZoom } from './ArtZoom';
+import { useState } from 'react';
 
 export const Item = ({image}) => {
 
-    const onTapScaling = (event) => {
-        const img = event.target;
-    //         img.style.transform = "scale(2)";
-    //         img.style.transition = "transform 0.25s ease";
-            img.classList.toggle("active");
-            img.classList.toggle("inactive");
-    //         console.log(img.className)
-        
-    }
-    const [isOpen, setOpen] = React.useState(false);
-    
-    const open = {
-        scale: 2,
-        zIndex: 1,
-      };
-      
-      const closed = {
-        scale: 1,
-        transitionEnd: { zIndex: 0 }
-      };
+  const [isOpen, setOpen] = useState(false);
+  const [imgSrc, setImgSrc] = useState(null);
 
+  const zoomIn = (event) => {
+    const imgSrc = event.target.src;
+    setImgSrc(imgSrc); // on recup la source de l'image et on la stocke dans le state
+    console.log(imgSrc) 
+    setOpen(!isOpen) // on affiche ou non le zoom sur l'écran
+    console.log(isOpen)
+    
+    
+}
 
     return (
-        <motion.div className="p-2"
         
-          animate={isOpen ? open : closed}
-          style={{ originX:0.03, originY:0.03 }}
-          onClick={() => setOpen(!isOpen)}
-          onTap={onTapScaling}
+        <motion.div onTap={zoomIn}
         >
-
             <img className="w-64 cursor-pointer inactive mobile:w-36" src={image} alt="" />
+            {isOpen && <ArtZoom imgSrc={imgSrc}/>}
         </motion.div>
     )
 }
